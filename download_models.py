@@ -23,21 +23,18 @@ def download_and_extract(zip_url, output_path, extract_to):
 def download_all_models():
     extract_path = "CCA/models/trained_models"
 
-    # Swin
     download_and_extract(
         zip_url="https://github.com/dxn1405/Cervical-Cancer-Image-Classification/releases/download/v1.0/Swin_best.zip",
         output_path=f"{extract_path}/Swin_best.zip",
         extract_to=extract_path
     )
-
-    # DeiT
+    
     download_and_extract(
         zip_url="https://github.com/dxn1405/Cervical-Cancer-Image-Classification/releases/download/v1.0/DeiT_best.zip",
         output_path=f"{extract_path}/DeiT_best.zip",
         extract_to=extract_path
     )
 
-    # CrossViT
     download_and_extract(
         zip_url="https://github.com/dxn1405/Cervical-Cancer-Image-Classification/releases/download/v1.0/CrossViT_best.zip",
         output_path=f"{extract_path}/CrossViT_best.zip",
