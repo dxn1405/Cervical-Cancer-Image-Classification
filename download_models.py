@@ -2,7 +2,13 @@ import requests
 import zipfile
 import os
 
+import os
+import zipfile
+import requests
+
 def download_and_extract(zip_url, output_path, extract_to):
+    os.makedirs(extract_to, exist_ok=True)
+
     target_pth = os.path.join(extract_to, os.path.basename(output_path).replace(".zip", ".pth"))
     if not os.path.exists(target_pth):
         print(f"Downloading model zip to: {output_path}")
@@ -13,11 +19,13 @@ def download_and_extract(zip_url, output_path, extract_to):
         print("Extracting...")
         with zipfile.ZipFile(output_path, 'r') as zip_ref:
             zip_ref.extractall(extract_to)
+        print(f"Extracted to {extract_to}")
 
         os.remove(output_path)
         print(f"Deleted {output_path}")
     else:
         print(f"{target_pth} already exists.")
+
 
 def download_all_models():
     extract_path = "CCA/models/trained_models"
