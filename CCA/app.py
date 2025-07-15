@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 import base64
 from download_models import download_all_models

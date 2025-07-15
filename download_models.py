@@ -18,8 +18,14 @@ def download_and_extract(zip_url, output_path, extract_to):
     else:
         print(f"{target_pth} already exists.")
 
+
 def download_all_models():
-    extract_path = "CCA/models/trained_models"
+    # Always resolve path relative to this file (download_models.py)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    extract_path = os.path.join(base_dir, "CCA", "models", "trained_models")
+
+    os.makedirs(extract_path, exist_ok=True)
+
 
     # ✅ Model 1: Swin
     download_and_extract(
@@ -41,7 +47,3 @@ def download_all_models():
         output_path=f"{extract_path}/CrossViT_best.zip",
         extract_to=extract_path
     )
-
-# ✅ Only runs if you execute this file directly (not when imported)
-if __name__ == "__main__":
-    download_all_models()
