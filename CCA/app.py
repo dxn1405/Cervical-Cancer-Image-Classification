@@ -1,6 +1,6 @@
 import streamlit as st
 import base64
-from Models import download_all_models
+from download_models import download_all_models
 download_all_models()
 
 st.set_page_config(page_title="Cervical Cancer Classifier", layout="wide")
