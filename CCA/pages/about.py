@@ -2,10 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="About", layout="centered")
 
-# Add this at the top of each page file
-st.sidebar.title("Cervical Cancer Image Classification Using Vision Transformer")
-
-
 st.title("What this project is about")
 
 st.markdown("""
