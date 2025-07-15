@@ -1,7 +1,6 @@
 import streamlit as st
 import base64
-import subprocess
-subprocess.run(["python", "Models.py"])
+
 
 st.set_page_config(page_title="Cervical Cancer Classifier", layout="wide")
 
