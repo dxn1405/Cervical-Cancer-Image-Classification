@@ -42,17 +42,18 @@ transform = transforms.Compose([
 def load_model(chosen_label: str):
     """Map the radio label → checkpoint name + model class, load and return."""
     ckpt_map = {
-        "Swin Transformer": ("Swin",    SwinTransformer),
-        "DeiT":              ("DeiT",    DeiT),
-        "CrossViT":          ("CrossViT",CrossViT),
+        "Swin Transformer": ("Swin", SwinTransformer),
+        "DeiT": ("DeiT", DeiT),
+        "CrossViT": ("CrossViT", CrossViT),
     }
+
     if chosen_label not in ckpt_map:
         raise ValueError(f"Unknown model label: {chosen_label}")
 
     ckpt_name, ModelClass = ckpt_map[chosen_label]
-        path = os.path.join("models", "trained_models", f"{ckpt_name}_best.pth")
+    path = os.path.join("models", "trained_models", f"{ckpt_name}_best.pth")
 
-    # ✅ DEBUGGING CODE — Check if file exists and print the path
+    # ✅ Debug: Show where it's looking
     print("🛠 Trying to load model from path:", path)
     if not os.path.exists(path):
         raise FileNotFoundError(f"❌ Model file not found at path: {path}")
@@ -62,6 +63,7 @@ def load_model(chosen_label: str):
     model.load_state_dict(state, strict=True)
     model.eval()
     return model
+
 
 if uploaded_file:
     img = Image.open(uploaded_file).convert("RGB")
