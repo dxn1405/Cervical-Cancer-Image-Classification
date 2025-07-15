@@ -32,9 +32,6 @@ set_bg("CCA/assets/background.jpg")  # Replace with your actual image path
 
 # Sidebar setup
 st.sidebar.title("Cervical Cancer Image Classification Using Vision Transformer")
-st.sidebar.page_link("pages/About.py", label="About")
-st.sidebar.page_link("pages/UserGuideline.py", label="User Guideline")
-
 # Hero section
 st.markdown("""
     <h1 style='font-size:72px; color:white; font-weight:bold;'>A CLASSIFICATION SYSTEM</h1>
