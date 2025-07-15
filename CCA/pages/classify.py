@@ -50,8 +50,12 @@ def load_model(chosen_label: str):
         raise ValueError(f"Unknown model label: {chosen_label}")
 
     ckpt_name, ModelClass = ckpt_map[chosen_label]
-    path = os.path.join("models", "trained_models", f"{ckpt_name}_best.pth")
+        path = os.path.join("models", "trained_models", f"{ckpt_name}_best.pth")
 
+    # ✅ DEBUGGING CODE — Check if file exists and print the path
+    print("🛠 Trying to load model from path:", path)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"❌ Model file not found at path: {path}")
 
     model = ModelClass(num_classes=len(class_names))
     state = torch.load(path, map_location="cpu")
