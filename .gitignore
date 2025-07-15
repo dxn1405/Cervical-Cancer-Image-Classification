@@ -1,34 +1,17 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Python
+# Model files (do not push these)
+*.pth
+*.zip
+
+# Datasets and training artifacts
+Sipakmed_*
+For Training in Front end/
+trained_models/
+
+# Python cache
 __pycache__/
 *.py[cod]
-*.pkl
-*.h5
 
-# Streamlit
-.streamlit/
-
-# IDEs
+# IDE settings
 .idea/
 .vscode/
 *.iml
-
-# Datasets & Models (very important)
-Sipakmed_Dataset/
-Sipakmed_Processed/
-Sipakmed_Train/
-Sipakmed_Test/
-Sipakmed_Val/
-For Training in Front end/
-
-# Misc
-*.zip
-*.csv
-.DS_Store
