@@ -29,21 +29,21 @@ def download_all_models():
 
     # ✅ Model 1: Swin
     download_and_extract(
-        zip_url="https://drive.google.com/file/d/1IZRMb6_EQJ6RbEZiYpNaI3NHWSI0VCLR/view?usp=drive_link",
+        zip_url="https://drive.google.com/uc?id=1IZRMb6_EQJ6RbEZiYpNaI3NHWSI0VCLR",
         output_path=f"{extract_path}/Swin_best.zip",
         extract_to=extract_path
     )
 
     # ✅ Model 2: DeiT
     download_and_extract(
-        zip_url="https://drive.google.com/file/d/1ZeKH3nJPdlccdKOlx_BBJ9Hge6NF6cgN/view?usp=drive_link",
+        zip_url="https://drive.google.com/uc?id=1IZRMb6_EQJ6RbEZiYpNaI3NHWSI0VCLR",
         output_path=f"{extract_path}/DeiT_best.zip",
         extract_to=extract_path
     )
 
     # ✅ Model 3: CrossViT
     download_and_extract(
-        zip_url="https://drive.google.com/file/d/10r5f4PnxMafqsqjZjjKqmL8VpY7la431/view?usp=drive_link",
+        zip_url="https://drive.google.com/uc?id=1IZRMb6_EQJ6RbEZiYpNaI3NHWSI0VCLR",
         output_path=f"{extract_path}/CrossViT_best.zip",
         extract_to=extract_path
     )
