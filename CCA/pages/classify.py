@@ -14,9 +14,7 @@ from models.crossViT import CrossViT
 # ——— Streamlit page setup ———
 st.set_page_config(page_title="Classify Image", layout="wide")
 st.sidebar.title("Cervical Cancer Image Classification Using Vision Transformer")
-st.sidebar.page_link("app.py",           label="Home")
-st.sidebar.page_link("pages/about.py",   label="About")
-st.sidebar.page_link("pages/UserGuideline.py", label="User Guideline")
+
 
 st.title("Insert Your Cervical Cancer Image")
 st.caption("Supported formats: .jpeg, .jpg, .png, .bmp")
