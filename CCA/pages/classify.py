@@ -13,7 +13,6 @@ from models.crossViT import CrossViT
 
 # ——— Streamlit page setup ———
 st.set_page_config(page_title="Classify Image", layout="wide")
-st.sidebar.title("Cervical Cancer Image Classification Using Vision Transformer")
 
 
 st.title("Insert Your Cervical Cancer Image")
