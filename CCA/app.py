@@ -35,5 +35,3 @@ st.markdown("""
     <h3 style='font-size:36px; color:white;'>to detect types of cervical cancer cells</h3>
 """, unsafe_allow_html=True)
 
-if st.button("Classify"):
-    st.switch_page("pages/Classify.py")
