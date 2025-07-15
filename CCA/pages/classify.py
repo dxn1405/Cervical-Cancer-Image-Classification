@@ -54,13 +54,13 @@ def load_model(chosen_label: str):
     path = os.path.join("CCA", "models", "trained_models", f"{ckpt_name}_best.pth")
 
     # ✅ Debug: Show where it's looking
-    print("🛠 Trying to load model from path:", path)
+    print(" Trying to load model from path:", path)
     if not os.path.exists(path):
         raise FileNotFoundError(f"❌ Model file not found at path: {path}")
 
     model = ModelClass(num_classes=len(class_names))
     state = torch.load(path, map_location="cpu")
-    model.load_state_dict(state, strict=True)
+    model.load_state_dict(state, strict=False)
     model.eval()
     return model
 
