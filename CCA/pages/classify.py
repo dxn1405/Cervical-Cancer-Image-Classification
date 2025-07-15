@@ -51,7 +51,7 @@ def load_model(chosen_label: str):
         raise ValueError(f"Unknown model label: {chosen_label}")
 
     ckpt_name, ModelClass = ckpt_map[chosen_label]
-    path = os.path.join("models", "trained_models", f"{ckpt_name}_best.pth")
+    path = os.path.join("CCA", "models", "trained_models", f"{ckpt_name}_best.pth")
 
     # ✅ Debug: Show where it's looking
     print("🛠 Trying to load model from path:", path)
